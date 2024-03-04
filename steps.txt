@@ -1,0 +1,59 @@
+✓
+
+>basic setup      ✓
+>test quill       ✓
+>look for voice to text    ✓
+>configure voice to text with quill  ✓
+>heading for note      ✓
+ 
+>practice redux    ../
+
+
+
+>connect database     ✓
+>overall + router implementation  ✓
+>databaseSync  ✓
+> create       ✓
+> read         ✓
+> update        .. {
+    > live update  ✓
+    > debouncing  ✓
+}
+> fucking delete of CRUD   ✓
+
+>blank title      ✓
+>cursor in end
+
+>Login component      ✓
+>auth and redirect     ✓
+>without database       ✓
+>user model...          ✓
+
+>try/catch
+>go through the complete lifecycle   ✓
+
+>login validators for particular field 
+>remove sign out btn for guest    ✓
+>add new note from notes index for guest user  ✓
+>speech to text
+>setup local state for guest user to prevent redirection to login page on refresh   ✓
+>util function for repetitive codes
+>sort compare for recent notes on top of list   ✓
+>guest user notes in local storage         ✓
+>delete button on notes list elements on hover    ✓
+>implement placeholder for Title                 ✓
+>integrate word and character counter in notes     ✓
+>check flow errors and uneccesary re renders
+>use as guest notepad bug
+
+>loading component    ✓
+>error component      ✓
+
+
+
+
+
+
+> go through styles again  ✓
+> complete skeleton for notes ✓
+> start designing  ✓

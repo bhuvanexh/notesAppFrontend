@@ -1,0 +1,15 @@
+.hero {
+    background-color: black;
+    background-image: url(./assets/backgroundHome.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.quill>.ql-container>.ql-editor.ql-blank::before {
+    font-size: 15px;
+    color: rgb(142, 142, 142);
+}
