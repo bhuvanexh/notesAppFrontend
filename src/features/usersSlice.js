@@ -4,7 +4,7 @@ import axios from 'axios'
 
 
 
-const USERS_URL = 'http://localhost:5000/users';
+const USERS_URL = `${import.meta.env.VITE_SERVER_URL}/users`;
 
 
 const initialState = {

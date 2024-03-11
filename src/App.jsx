@@ -14,6 +14,10 @@ import Register, { registerAction } from './Components/LoginComponent/Register'
 import Error from './Components/Error'
 import Loading from './Components/Loading'
 import { Navbar } from './Components/HomeComponents/Navbar'
+import Translator from './Components/ToolsComponent/Translator'
+import { ToolsWrapper } from './Components/ToolsComponent/ToolsWrapper'
+import { TodoWrapper } from './Components/ToolsComponent/TodoComponents/TodoWrapper'
+import Counter from './Components/ToolsComponent/Counter'
 
 
 function App() {
@@ -42,6 +46,11 @@ function App() {
         <Route path='/notes' element={<NotesWrapper />} errorElement={<Error />}>
           <Route index element={<NoteIndex />} errorElement={<Error />} />
           <Route path=':id' element={<NoteElement />} errorElement={<Error />} />
+        </Route>
+        <Route path='/tools' element={<ToolsWrapper />} errorElement={<Error />}>
+          <Route index element={<Translator />} errorElement={<Error />} />
+          <Route path='todo' element={<TodoWrapper />} errorElement={<Error />} />
+          <Route path='counter' element={<Counter />} errorElement={<Error />} />
         </Route>
       </Route>
 

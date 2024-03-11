@@ -13,3 +13,7 @@
     font-size: 15px;
     color: rgb(142, 142, 142);
 }
+
+.completed {
+    text-decoration: line-through;
+}

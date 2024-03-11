@@ -6,7 +6,7 @@ import { v4 } from "uuid"
 import { deleteNoteLocal } from "../utils/util";
 
 
-const NOTES_URL = 'http://localhost:5000/notes';
+const NOTES_URL = `${import.meta.env.VITE_SERVER_URL}/notes`;
 
 const notesAdapter = createEntityAdapter({
     sortComparer: (a, b) => b.date.localeCompare(a.date)
@@ -21,7 +21,7 @@ const initialState = notesAdapter.getInitialState({
 
 export const fetchNotes = createAsyncThunk('notes/fetchNotes', async () => {
     try {
-        const res = await axios.get('http://localhost:5000/notes', {
+        const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/notes`, {
             headers: {
                 Accept: 'application/json',
                 "Content-Type": "application/json"

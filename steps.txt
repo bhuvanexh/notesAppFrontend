@@ -35,7 +35,7 @@
 >login validators for particular field 
 >remove sign out btn for guest    ✓
 >add new note from notes index for guest user  ✓
->speech to text
+>speech to text                           ✓
 >setup local state for guest user to prevent redirection to login page on refresh   ✓
 >util function for repetitive codes
 >sort compare for recent notes on top of list   ✓
@@ -44,7 +44,14 @@
 >implement placeholder for Title                 ✓
 >integrate word and character counter in notes     ✓
 >check flow errors and uneccesary re renders
->use as guest notepad bug
+>use as guest notepad bug                 ✓
+>trim long titles                         ✓
+>active colors for nav links and wrapper notes lists   ✓
+>internal char and word counter                ✓
+>counter text color         ✓
+>copy button for note element          ../
+>hover cursor for all buttons       ✓
+ 
 
 >loading component    ✓
 >error component      ✓
@@ -54,6 +61,23 @@
 
 
 
+
+
+
+
+
+
 > go through styles again  ✓
 > complete skeleton for notes ✓
 > start designing  ✓
+
+
+> home      ✓
+> nav       ✓
+>noteswrapper  ✓ 
+>notes index  ✓
+>notes element  ✓
+> tools wrapper ✓
+> translator    ✓
+> todo  ✓
+> counter ✓

@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { Link, Outlet, useNavigate, useOutletContext } from "react-router-dom";
+import { Outlet, redirect, useNavigate, useOutletContext } from "react-router-dom";
 import { addNewNote, addNewNoteGuest, deleteNote, deleteNoteGuest, fetchNotes, getError, getNotes, getStatus, setAllNotesGuest, setNotesStatus } from "../../features/notesSlice";
 import { v4 } from "uuid"
 import Sidebar from "./Sidebar";
-import { MdDelete } from "react-icons/md";
 import { addNoteLocal, getNotesLocal } from "../../utils/util";
+import Notelink from "./Notelink";
 
 export default function NotesWrapper() {
     const status = getStatus()
@@ -33,28 +33,13 @@ export default function NotesWrapper() {
         } else if (user == 'guest') {
             dispatch(deleteNoteGuest(id))
         }
-        navigate('/notes')
+        console.log('delete and navigate');
+        redirect('/notes')
+        return navigate('/notes')
     }
-    const [showDelete, setShowDelete] = useState(false);
 
     const renderEl = notes.map(n => (
-        <li
-            key={n.id}
-            className="relative flex items-center py-2 px-3 text-white font-roboto text-lg bg-[#447df8] hover:bg-gray-700 cursor-pointer"
-            onMouseEnter={() => setShowDelete(true)}
-            onMouseLeave={() => setShowDelete(false)}
-        >
-            <Link to={`${n.id}`} className="block w-full h-full relative" key={n.id}>
-                {n.title || 'untitled'}
-            </Link>
-            {showDelete && (
-                <MdDelete
-                    size={22}
-                    onClick={() => handleDelete(n.id)}
-                    className="absolute self-center top-0 right-0 mt-[10px] mr-2 cursor-pointer"
-                />
-            )}
-        </li>
+        <Notelink key={n.id} n={n} handleDelete={handleDelete} />
     ))
 
     async function addNote() {
@@ -79,8 +64,7 @@ export default function NotesWrapper() {
             navigate(`/notes/${tempId}`)
         }
     }
-    // let guestNotesParsed = JSON.parse(localStorage.getItem('guestNotes'))
-    // console.log(guestNotesParsed, 'guest notes');
+
 
     if (status == 'loading' || status == 'idle') {
         return (<>Loading...</>)

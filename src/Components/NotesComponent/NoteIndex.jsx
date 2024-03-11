@@ -30,8 +30,11 @@ export default function NoteIndex() {
 
     return (
         <>
-            <button className="text-3xl py-3 w-80 rounded-xl bg-blue-900 text-white font-poppins" onClick={addNote}>
+            <button className="text-3xl py-3 w-80 rounded-xl bg-[#00df9a] text-white font-openSans font-bold" onClick={addNote}>
                 Create Note
+                <span className=" ml-2 font-extrabold">
+                    +
+                </span>
             </button>
         </>
     )
