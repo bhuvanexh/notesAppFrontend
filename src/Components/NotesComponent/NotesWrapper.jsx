@@ -6,6 +6,7 @@ import { v4 } from "uuid"
 import Sidebar from "./Sidebar";
 import { addNoteLocal, getNotesLocal } from "../../utils/util";
 import Notelink from "./Notelink";
+import Loading from "../Loading";
 
 export default function NotesWrapper() {
     const status = getStatus()
@@ -67,7 +68,7 @@ export default function NotesWrapper() {
 
 
     if (status == 'loading' || status == 'idle') {
-        return (<>Loading...</>)
+        return (<><Loading /></>)
     }
     if (status == 'failed') {
         return (<>{error}</>)
